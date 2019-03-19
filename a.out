@@ -1,0 +1,519 @@
+Sun Oct  7 17:38:23 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 17:38:23 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 17:38:23 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 17:38:23 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 17:38:23 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:38:23 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 17:38:23 2018 UDP link local: (not bound)
+Sun Oct  7 17:38:23 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:38:23 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 17:38:23 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=832817f6 33e5a43f
+Sun Oct  7 17:38:23 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 17:38:23 2018 VERIFY KU OK
+Sun Oct  7 17:38:23 2018 Validating certificate extended key usage
+Sun Oct  7 17:38:23 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 17:38:23 2018 VERIFY EKU OK
+Sun Oct  7 17:38:23 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 17:38:25 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 17:38:25 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:38:26 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 17:38:32 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 17:38:32 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 0,cipher AES-256-GCM'
+Sun Oct  7 17:38:32 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 17:38:32 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 17:38:32 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 17:38:32 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 17:38:32 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 17:38:32 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 17:38:32 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 17:38:32 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 17:38:32 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 17:38:32 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 17:38:32 2018 ROUTE_GATEWAY 172.16.100.1/255.255.252.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 17:38:32 2018 TUN/TAP device tun0 opened
+Sun Oct  7 17:38:32 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 17:38:32 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 17:38:32 2018 /sbin/ip link set dev tun0 up mtu 1500
+Sun Oct  7 17:38:32 2018 /sbin/ip addr add dev tun0 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 17:38:32 2018 /sbin/ip route add 13.233.63.241/32 via 172.16.100.1
+RTNETLINK answers: File exists
+Sun Oct  7 17:38:32 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:38:32 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+Sun Oct  7 17:38:32 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+Sun Oct  7 17:38:32 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+Sun Oct  7 17:38:32 2018 GID set to nogroup
+Sun Oct  7 17:38:32 2018 UID set to nobody
+Sun Oct  7 17:38:32 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 17:38:32 2018 Initialization Sequence Completed
+Sun Oct  7 17:49:57 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 17:49:57 2018 /sbin/ip route del 10.8.0.1/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:49:57 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:49:57 2018 /sbin/ip route del 13.233.63.241/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:49:57 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:49:57 2018 /sbin/ip route del 0.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:49:57 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:49:57 2018 /sbin/ip route del 128.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:49:57 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:49:57 2018 Closing TUN/TAP interface
+Sun Oct  7 17:49:57 2018 /sbin/ip addr del dev tun0 local 10.8.0.6 peer 10.8.0.5
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:49:57 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 17:49:57 2018 SIGTERM[hard,] received, process exiting
+Sun Oct  7 17:56:24 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 17:56:24 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 17:56:24 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 17:56:24 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 17:56:24 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:56:24 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 17:56:24 2018 UDP link local: (not bound)
+Sun Oct  7 17:56:24 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:56:24 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 17:56:24 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=ba0ccb0a fb9438f8
+Sun Oct  7 17:56:24 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 17:56:24 2018 VERIFY KU OK
+Sun Oct  7 17:56:24 2018 Validating certificate extended key usage
+Sun Oct  7 17:56:24 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 17:56:24 2018 VERIFY EKU OK
+Sun Oct  7 17:56:24 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 17:56:24 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 17:56:24 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:56:25 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 17:56:25 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 1,cipher AES-256-GCM'
+Sun Oct  7 17:56:25 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 17:56:25 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 17:56:25 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 17:56:25 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 17:56:25 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 17:56:25 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 17:56:25 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 17:56:25 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 17:56:25 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 17:56:25 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 17:56:25 2018 ROUTE_GATEWAY 192.168.43.1/255.255.255.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 17:56:25 2018 TUN/TAP device tun1 opened
+Sun Oct  7 17:56:25 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 17:56:25 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 17:56:25 2018 /sbin/ip link set dev tun1 up mtu 1500
+Sun Oct  7 17:56:25 2018 /sbin/ip addr add dev tun1 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 17:56:25 2018 /sbin/ip route add 13.233.63.241/32 via 192.168.43.1
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:25 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:25 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:25 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:25 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:25 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:25 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:25 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:25 2018 GID set to nogroup
+Sun Oct  7 17:56:25 2018 UID set to nobody
+Sun Oct  7 17:56:25 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 17:56:25 2018 Initialization Sequence Completed
+Sun Oct  7 17:56:57 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 17:56:57 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 17:56:57 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 17:56:57 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 17:56:57 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:56:57 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 17:56:57 2018 UDP link local: (not bound)
+Sun Oct  7 17:56:57 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:56:57 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 17:56:58 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=ba7223a9 a33cba20
+Sun Oct  7 17:56:58 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 17:56:58 2018 VERIFY KU OK
+Sun Oct  7 17:56:58 2018 Validating certificate extended key usage
+Sun Oct  7 17:56:58 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 17:56:58 2018 VERIFY EKU OK
+Sun Oct  7 17:56:58 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 17:56:58 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 17:56:58 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 17:56:59 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 17:56:59 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 0,cipher AES-256-GCM'
+Sun Oct  7 17:56:59 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 17:56:59 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 17:56:59 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 17:56:59 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 17:56:59 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 17:56:59 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 17:56:59 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 17:56:59 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 17:56:59 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 17:56:59 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 17:56:59 2018 ROUTE_GATEWAY 192.168.43.1/255.255.255.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 17:56:59 2018 TUN/TAP device tun2 opened
+Sun Oct  7 17:56:59 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 17:56:59 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 17:56:59 2018 /sbin/ip link set dev tun2 up mtu 1500
+Sun Oct  7 17:56:59 2018 /sbin/ip addr add dev tun2 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 17:56:59 2018 /sbin/ip route add 13.233.63.241/32 via 192.168.43.1
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:59 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:59 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:59 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:59 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:59 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:59 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+RTNETLINK answers: File exists
+Sun Oct  7 17:56:59 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 17:56:59 2018 GID set to nogroup
+Sun Oct  7 17:56:59 2018 UID set to nobody
+Sun Oct  7 17:56:59 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 17:56:59 2018 Initialization Sequence Completed
+Sun Oct  7 17:57:34 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 17:57:34 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 17:57:34 2018 /sbin/ip route del 13.233.63.241/32
+Sun Oct  7 17:57:34 2018 /sbin/ip route del 13.233.63.241/32
+RTNETLINK answers: Operation not permitted
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:57:34 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 /sbin/ip route del 0.0.0.0/1
+Sun Oct  7 17:57:34 2018 /sbin/ip route del 0.0.0.0/1
+RTNETLINK answers: Operation not permitted
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:57:34 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 /sbin/ip route del 128.0.0.0/1
+Sun Oct  7 17:57:34 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 /sbin/ip route del 128.0.0.0/1
+RTNETLINK answers: Operation not permitted
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:57:34 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 Closing TUN/TAP interface
+Sun Oct  7 17:57:34 2018 /sbin/ip addr del dev tun1 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 17:57:34 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 Closing TUN/TAP interface
+Sun Oct  7 17:57:34 2018 /sbin/ip addr del dev tun2 local 10.8.0.6 peer 10.8.0.5
+RTNETLINK answers: Operation not permitted
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 17:57:34 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 17:57:34 2018 SIGTERM[hard,] received, process exiting
+Sun Oct  7 17:57:34 2018 SIGTERM[hard,] received, process exiting
+Sun Oct  7 18:07:39 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 18:07:39 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 18:07:39 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:07:39 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:07:39 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:07:39 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 18:07:39 2018 UDP link local: (not bound)
+Sun Oct  7 18:07:39 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:07:39 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 18:07:39 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=dd4369de dbdb42c3
+Sun Oct  7 18:07:39 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:07:39 2018 VERIFY KU OK
+Sun Oct  7 18:07:39 2018 Validating certificate extended key usage
+Sun Oct  7 18:07:39 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 18:07:39 2018 VERIFY EKU OK
+Sun Oct  7 18:07:39 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:07:43 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 18:07:43 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:07:44 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 18:07:44 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 0,cipher AES-256-GCM'
+Sun Oct  7 18:07:44 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 18:07:44 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 18:07:44 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 18:07:44 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 18:07:44 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 18:07:44 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 18:07:44 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 18:07:44 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 18:07:44 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:07:44 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:07:44 2018 ROUTE_GATEWAY 192.168.43.1/255.255.255.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 18:07:44 2018 TUN/TAP device tun0 opened
+Sun Oct  7 18:07:44 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 18:07:44 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 18:07:44 2018 /sbin/ip link set dev tun0 up mtu 1500
+Sun Oct  7 18:07:44 2018 /sbin/ip addr add dev tun0 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 18:07:44 2018 /sbin/ip route add 13.233.63.241/32 via 192.168.43.1
+RTNETLINK answers: File exists
+Sun Oct  7 18:07:44 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 18:07:44 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:07:44 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:07:44 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+Sun Oct  7 18:07:44 2018 GID set to nogroup
+Sun Oct  7 18:07:44 2018 UID set to nobody
+Sun Oct  7 18:07:44 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 18:07:44 2018 Initialization Sequence Completed
+Sun Oct  7 18:08:15 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 18:08:15 2018 /sbin/ip route del 10.8.0.1/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:08:15 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:08:15 2018 /sbin/ip route del 13.233.63.241/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:08:15 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:08:15 2018 /sbin/ip route del 0.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:08:15 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:08:15 2018 /sbin/ip route del 128.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:08:15 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:08:15 2018 Closing TUN/TAP interface
+Sun Oct  7 18:08:15 2018 /sbin/ip addr del dev tun0 local 10.8.0.6 peer 10.8.0.5
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:08:15 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 18:08:15 2018 SIGINT[hard,] received, process exiting
+Sun Oct  7 18:09:16 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 18:09:16 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 18:09:16 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:09:16 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:09:16 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:09:16 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 18:09:16 2018 UDP link local: (not bound)
+Sun Oct  7 18:09:16 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:09:16 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 18:09:16 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=b4a5a5af 13a1e798
+Sun Oct  7 18:09:18 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:09:18 2018 VERIFY KU OK
+Sun Oct  7 18:09:18 2018 Validating certificate extended key usage
+Sun Oct  7 18:09:18 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 18:09:18 2018 VERIFY EKU OK
+Sun Oct  7 18:09:18 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:09:22 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 18:09:22 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:09:23 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 18:09:23 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 1,cipher AES-256-GCM'
+Sun Oct  7 18:09:23 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 18:09:23 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 18:09:23 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 18:09:23 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 18:09:23 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 18:09:23 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 18:09:23 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 18:09:23 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 18:09:23 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:09:23 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:09:23 2018 ROUTE_GATEWAY 192.168.43.1/255.255.255.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 18:09:23 2018 TUN/TAP device tun0 opened
+Sun Oct  7 18:09:23 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 18:09:23 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 18:09:23 2018 /sbin/ip link set dev tun0 up mtu 1500
+Sun Oct  7 18:09:23 2018 /sbin/ip addr add dev tun0 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 18:09:23 2018 /sbin/ip route add 13.233.63.241/32 via 192.168.43.1
+RTNETLINK answers: File exists
+Sun Oct  7 18:09:23 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 18:09:23 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:09:23 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:09:23 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+Sun Oct  7 18:09:23 2018 GID set to nogroup
+Sun Oct  7 18:09:23 2018 UID set to nobody
+Sun Oct  7 18:09:23 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 18:09:23 2018 Initialization Sequence Completed
+Sun Oct  7 18:09:39 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 18:09:39 2018 /sbin/ip route del 10.8.0.1/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:09:39 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:09:39 2018 /sbin/ip route del 13.233.63.241/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:09:39 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:09:39 2018 /sbin/ip route del 0.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:09:39 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:09:39 2018 /sbin/ip route del 128.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:09:39 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:09:39 2018 Closing TUN/TAP interface
+Sun Oct  7 18:09:39 2018 /sbin/ip addr del dev tun0 local 10.8.0.6 peer 10.8.0.5
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:09:39 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 18:09:39 2018 SIGINT[hard,] received, process exiting
+Sun Oct  7 18:13:54 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 18:13:54 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 18:13:54 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:13:54 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:13:54 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:13:54 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 18:13:54 2018 UDP link local: (not bound)
+Sun Oct  7 18:13:54 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:13:54 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 18:13:54 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=33ffb961 42856af4
+Sun Oct  7 18:13:54 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:13:54 2018 VERIFY KU OK
+Sun Oct  7 18:13:54 2018 Validating certificate extended key usage
+Sun Oct  7 18:13:54 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 18:13:54 2018 VERIFY EKU OK
+Sun Oct  7 18:13:54 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:13:54 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 18:13:54 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:13:55 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 18:13:57 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 0,cipher AES-256-GCM'
+Sun Oct  7 18:13:57 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 18:13:57 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 18:13:57 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 18:13:57 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 18:13:57 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 18:13:57 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 18:13:57 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 18:13:57 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 18:13:57 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:13:57 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:13:57 2018 ROUTE_GATEWAY 192.168.43.1/255.255.255.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 18:13:57 2018 TUN/TAP device tun0 opened
+Sun Oct  7 18:13:57 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 18:13:57 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 18:13:57 2018 /sbin/ip link set dev tun0 up mtu 1500
+Sun Oct  7 18:13:57 2018 /sbin/ip addr add dev tun0 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 18:13:57 2018 /sbin/ip route add 13.233.63.241/32 via 192.168.43.1
+RTNETLINK answers: File exists
+Sun Oct  7 18:13:57 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 18:13:57 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:13:57 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:13:57 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+Sun Oct  7 18:13:57 2018 GID set to nogroup
+Sun Oct  7 18:13:57 2018 UID set to nobody
+Sun Oct  7 18:13:57 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 18:13:57 2018 Initialization Sequence Completed
+Sun Oct  7 18:14:18 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 18:14:18 2018 /sbin/ip route del 10.8.0.1/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:14:18 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:14:18 2018 /sbin/ip route del 13.233.63.241/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:14:18 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:14:18 2018 /sbin/ip route del 0.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:14:18 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:14:18 2018 /sbin/ip route del 128.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:14:18 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:14:18 2018 Closing TUN/TAP interface
+Sun Oct  7 18:14:18 2018 /sbin/ip addr del dev tun0 local 10.8.0.6 peer 10.8.0.5
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:14:18 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 18:14:18 2018 SIGINT[hard,] received, process exiting
+Sun Oct  7 18:14:37 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 18:14:37 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 18:14:37 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:14:37 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:14:37 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:14:37 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 18:14:37 2018 UDP link local: (not bound)
+Sun Oct  7 18:14:37 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:14:37 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 18:14:37 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=6da9c44d 20227aaa
+Sun Oct  7 18:14:40 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:14:40 2018 VERIFY KU OK
+Sun Oct  7 18:14:40 2018 Validating certificate extended key usage
+Sun Oct  7 18:14:40 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 18:14:40 2018 VERIFY EKU OK
+Sun Oct  7 18:14:40 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:14:43 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 18:14:43 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:14:44 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 18:14:44 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 1,cipher AES-256-GCM'
+Sun Oct  7 18:14:44 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 18:14:44 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 18:14:44 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 18:14:44 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 18:14:44 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 18:14:44 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 18:14:44 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 18:14:44 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 18:14:44 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:14:44 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:14:44 2018 ROUTE_GATEWAY 192.168.43.1/255.255.255.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 18:14:44 2018 TUN/TAP device tun0 opened
+Sun Oct  7 18:14:44 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 18:14:44 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 18:14:44 2018 /sbin/ip link set dev tun0 up mtu 1500
+Sun Oct  7 18:14:44 2018 /sbin/ip addr add dev tun0 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 18:14:44 2018 /sbin/ip route add 13.233.63.241/32 via 192.168.43.1
+RTNETLINK answers: File exists
+Sun Oct  7 18:14:44 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 18:14:44 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:14:44 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:14:44 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+Sun Oct  7 18:14:44 2018 GID set to nogroup
+Sun Oct  7 18:14:44 2018 UID set to nobody
+Sun Oct  7 18:14:44 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 18:14:44 2018 Initialization Sequence Completed
+Sun Oct  7 18:15:05 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 18:15:05 2018 /sbin/ip route del 10.8.0.1/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:15:05 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:15:05 2018 /sbin/ip route del 13.233.63.241/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:15:05 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:15:05 2018 /sbin/ip route del 0.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:15:05 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:15:05 2018 /sbin/ip route del 128.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:15:05 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:15:05 2018 Closing TUN/TAP interface
+Sun Oct  7 18:15:05 2018 /sbin/ip addr del dev tun0 local 10.8.0.6 peer 10.8.0.5
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:15:05 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 18:15:05 2018 SIGINT[hard,] received, process exiting
+Sun Oct  7 18:16:22 2018 OpenVPN 2.4.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS11] [MH/PKTINFO] [AEAD] built on Mar  4 2018
+Sun Oct  7 18:16:22 2018 library versions: OpenSSL 1.1.0h  27 Mar 2018, LZO 2.10
+Sun Oct  7 18:16:22 2018 Outgoing Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:16:22 2018 Incoming Control Channel Authentication: Using 256 bit message hash 'SHA256' for HMAC authentication
+Sun Oct  7 18:16:22 2018 TCP/UDP: Preserving recently used remote address: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:16:22 2018 Socket Buffers: R=[212992->212992] S=[212992->212992]
+Sun Oct  7 18:16:22 2018 UDP link local: (not bound)
+Sun Oct  7 18:16:22 2018 UDP link remote: [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:16:22 2018 NOTE: UID/GID downgrade will be delayed because of --client, --pull, or --up-delay
+Sun Oct  7 18:16:22 2018 TLS: Initial packet from [AF_INET]13.233.63.241:1194, sid=a1e805a2 556ed312
+Sun Oct  7 18:16:22 2018 VERIFY OK: depth=1, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Inators CA, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:16:22 2018 VERIFY KU OK
+Sun Oct  7 18:16:22 2018 Validating certificate extended key usage
+Sun Oct  7 18:16:22 2018 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+Sun Oct  7 18:16:22 2018 VERIFY EKU OK
+Sun Oct  7 18:16:22 2018 VERIFY OK: depth=0, C=IN, ST=TN, L=Vellore, O=Inators, OU=Arlton, CN=Arlton, name=Arlton, emailAddress=ashishkmr472@gmail.com
+Sun Oct  7 18:16:37 2018 Control Channel: TLSv1.2, cipher TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384, 2048 bit RSA
+Sun Oct  7 18:16:37 2018 [Arlton] Peer Connection Initiated with [AF_INET]13.233.63.241:1194
+Sun Oct  7 18:16:38 2018 SENT CONTROL [Arlton]: 'PUSH_REQUEST' (status=1)
+Sun Oct  7 18:16:38 2018 PUSH: Received control message: 'PUSH_REPLY,redirect-gateway def1 bypass-dhcp,dhcp-option DNS 208.67.222.222,dhcp-option DNS 208.67.220.220,route 10.8.0.1,topology net30,ping 10,ping-restart 120,ifconfig 10.8.0.6 10.8.0.5,peer-id 0,cipher AES-256-GCM'
+Sun Oct  7 18:16:38 2018 OPTIONS IMPORT: timers and/or timeouts modified
+Sun Oct  7 18:16:38 2018 OPTIONS IMPORT: --ifconfig/up options modified
+Sun Oct  7 18:16:38 2018 OPTIONS IMPORT: route options modified
+Sun Oct  7 18:16:38 2018 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+Sun Oct  7 18:16:38 2018 OPTIONS IMPORT: peer-id set
+Sun Oct  7 18:16:38 2018 OPTIONS IMPORT: adjusting link_mtu to 1624
+Sun Oct  7 18:16:38 2018 OPTIONS IMPORT: data channel crypto options modified
+Sun Oct  7 18:16:38 2018 Data Channel: using negotiated cipher 'AES-256-GCM'
+Sun Oct  7 18:16:38 2018 Outgoing Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:16:38 2018 Incoming Data Channel: Cipher 'AES-256-GCM' initialized with 256 bit key
+Sun Oct  7 18:16:38 2018 ROUTE_GATEWAY 192.168.43.1/255.255.255.0 IFACE=wlan0 HWADDR=a4:34:d9:a5:c5:9f
+Sun Oct  7 18:16:38 2018 TUN/TAP device tun0 opened
+Sun Oct  7 18:16:38 2018 TUN/TAP TX queue length set to 100
+Sun Oct  7 18:16:38 2018 do_ifconfig, tt->did_ifconfig_ipv6_setup=0
+Sun Oct  7 18:16:38 2018 /sbin/ip link set dev tun0 up mtu 1500
+Sun Oct  7 18:16:38 2018 /sbin/ip addr add dev tun0 local 10.8.0.6 peer 10.8.0.5
+Sun Oct  7 18:16:38 2018 /sbin/ip route add 13.233.63.241/32 via 192.168.43.1
+RTNETLINK answers: File exists
+Sun Oct  7 18:16:38 2018 ERROR: Linux route add command failed: external program exited with error status: 2
+Sun Oct  7 18:16:38 2018 /sbin/ip route add 0.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:16:38 2018 /sbin/ip route add 128.0.0.0/1 via 10.8.0.5
+Sun Oct  7 18:16:38 2018 /sbin/ip route add 10.8.0.1/32 via 10.8.0.5
+Sun Oct  7 18:16:38 2018 GID set to nogroup
+Sun Oct  7 18:16:38 2018 UID set to nobody
+Sun Oct  7 18:16:38 2018 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this
+Sun Oct  7 18:16:38 2018 Initialization Sequence Completed
+Sun Oct  7 18:17:04 2018 event_wait : Interrupted system call (code=4)
+Sun Oct  7 18:17:04 2018 /sbin/ip route del 10.8.0.1/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:17:04 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:17:04 2018 /sbin/ip route del 13.233.63.241/32
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:17:04 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:17:04 2018 /sbin/ip route del 0.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:17:04 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:17:04 2018 /sbin/ip route del 128.0.0.0/1
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:17:04 2018 ERROR: Linux route delete command failed: external program exited with error status: 2
+Sun Oct  7 18:17:04 2018 Closing TUN/TAP interface
+Sun Oct  7 18:17:04 2018 /sbin/ip addr del dev tun0 local 10.8.0.6 peer 10.8.0.5
+RTNETLINK answers: Operation not permitted
+Sun Oct  7 18:17:04 2018 Linux ip addr del failed: external program exited with error status: 2
+Sun Oct  7 18:17:04 2018 SIGINT[hard,] received, process exiting

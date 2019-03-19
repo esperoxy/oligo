@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Arlton Dashboard v0.0</title>
+    <script>
+        /*
+        <!--
+        <div id="tire1"><div id="tire1_glyph">1</div><div id="tire1_data"></div></div>
+        -->
+        */
+        // Function to create those tires on run time!
+        function createTires() 
+        {
+            var tire_config = {{ total_tires| safe }};
+        var config_template = "";
+        if (tire_config == 4) {
+            config_template = ["&ensp;&ensp;&ensp;&ensp;", "<br><br><br><br><br><br>", "&ensp;&ensp;&ensp;&ensp;", "<br>"];
+        }
+        else if (tire_config == 10) {
+            config_template = ["&ensp;&ensp;&ensp;&ensp;", "<br><br><br><br>", "&ensp;", "&nnsp;", "&ensp;", "<br><br>", "&ensp;", "&nnsp;", "&ensp;", "<br>"];
+        }
+        else if (tire_config = 14) {
+
+        }
+        var tires = JSON.parse('{{tires | safe }}');
+        var tire_html = "";
+        for (var i = 1; i <= tire_config; i++) {
+            tire_html += "<div class='tirewrapper' id='tire" + i + "'><div class='tires' id='tire" + i + "_glyph'>" + i + "</div><div id='tire" + i + "_data'></div>"+tires[i.toString()]+"PSI</div>";
+            tire_html += config_template[i - 1];
+        }
+        var vv = document.getElementById('tires')
+        vv.innerHTML = tire_html
+        }
+
+        function update_info() {
+
+        }
+
+        function dashboard_init() {
+            createTires()
+        }
+    </script>
+    <link href="{{ url_for('static', filename='css/dashboard.css') }}" rel="stylesheet">
+</head>
+
+<body onload="dashboard_init()">
+    <div id="dashboard">
+        <div id="navbar">
+            <div id="searchbar">
+                <form action="/dashboard" method="POST">
+                    Vehicle Number -
+                    <input id="search" name="number" type="text" value="{{ vnum }}">
+                    <input id="search_button" name="submit" type="submit">
+                </form>
+            </div>
+        </div>
+        <div id="maparea">
+            <div id="info">
+                    FUEL - {{ fuel }} L&emsp;&emsp;KM READING - {{ total_distance }} KM&emsp;&emsp;AVERAGE - {{ milage }} KM/L&emsp;&emsp;
+            </div>
+            <div id="map">
+
+            </div>
+        </div>
+        <div id="tirearea">
+            <div id="vehicle_number">
+                {{ vnum }}
+            </div>
+            <div id="tires">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
